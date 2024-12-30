@@ -21,7 +21,7 @@ makeConnection().then( () => console.log("Connected to DB") );
 app.use( '/user' , userRouter );
 app.use( '/exam' , Dataroute);
 
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 app.listen(
     3000,
