@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 
 
-const makeConnection  = async (db_name) => {
-    return await mongoose.connect('mongodb://127.0.0.1:27017/DALI');
+const makeConnection  = async () => {
+    return await mongoose.connect(`mongodb+srv://IQRA:${process.env.dbpass}@cluster0.atrsi.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`);
 }
 
 module.exports = {
