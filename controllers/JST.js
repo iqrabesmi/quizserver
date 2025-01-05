@@ -1,5 +1,5 @@
 const { JST } = require("../models/JST");
-const { TotalJST } = require("../models/TotalJST");
+const TotalJST  = require("../models/TotalJST");
 const { calculateStats }= require("../Helper/CalculateStats");
 
 const handleGetJST = async(req,res) => {
