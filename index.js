@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const { makeConnection } = require('./connect');
 const { userRouter } = require('./routes/user');
-const { Dataroute } = require('./routes/exam');
+const { JSTRoute } = require('./routes/JST');
 
 const app = express();
 
@@ -19,7 +19,7 @@ makeConnection().then( () => console.log("Connected to DB") );
 
 // Routes
 app.use( '/user' , userRouter );
-app.use( '/exam' , Dataroute);
+app.use( '/JST' , JSTRoute );
 
 const port = process.env.PORT || 3000;
 
