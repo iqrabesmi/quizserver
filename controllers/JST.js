@@ -1,4 +1,4 @@
-const JST = require("../models/JST");
+const {JST} = require("../models/JST");
 const TotalJST = require("../models/TotalJST");
 const calculateStats = require("../Helper/CalculateStats");
 
