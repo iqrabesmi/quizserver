@@ -1,12 +1,12 @@
 const express = require("express");
-const { handleGetJST } = require("../controllers/JST");
+const { handleGetJST, handlePostJST } = require("../controllers/JST");
 
 
 const JSTRoute = express.Router();
 
 
-JSTRoute.get(handleGetJST)
-        .post(handlePostJST);
+JSTRoute.get( '/find', handleGetJST)
+        .post('/add', handlePostJST);
 
 
 module.exports = {
