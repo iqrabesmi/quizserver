@@ -6,7 +6,7 @@ const calculateStats = (scores) => {
     const meanScore = mean(scores);
     const medianScore = median(scores);
     const stdDev = std(scores);
-    return { total, mean: meanScore, median: medianScore, stdDev , cutoff: stdDev-(1.5*meanScore) };
+    return { total, mean: meanScore, median: medianScore, stdDev , cutoff: meanScore-(2*stdDev) };
 };
 
 
