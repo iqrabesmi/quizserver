@@ -3,6 +3,7 @@ const cors = require('cors');
 const { makeConnection } = require('./connect');
 const { userRouter } = require('./routes/user');
 const { JSTRoute } = require('./routes/JST');
+const { TotalRoute } = require('./routes/total');
 
 const app = express();
 
@@ -20,6 +21,7 @@ makeConnection().then( () => console.log("Connected to DB") );
 // Routes
 app.use( '/user' , userRouter );
 app.use( '/JST' , JSTRoute );
+app.use( '/total' , TotalRoute );
 
 const port = process.env.PORT || 3000;
 
