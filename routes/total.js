@@ -5,7 +5,6 @@ const TotalRoute = express.Router();
 
 TotalRoute.get("/find", handleTotalGet);
 
-
 module.exports = {
     TotalRoute,
-}
+};
